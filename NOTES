@@ -1,0 +1,88 @@
+Kylier Fauquher
+2022
+
+LEVEL 0: The goal of this level is for you to log into the game using SSH.
+>log into server with: ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+>enter password: bandit0
+
+>ssh is how two computers communicate, and or remote access to resources. This is how we are playing the game and connecting to the game server.
+
+>Useful tip, when copy and pasting passwords, which you will do very often, sometimes the terminal won't show you what you are typing and sometimes normal copy and paste functions will not work like you're used to. Highlight the line, ctrl C it, then on the password line ONLY right click on it and press ENTER key. This should hopefully help you out if you are stuck.
+
+
+LEVEL 0-1: The password for the next level is stored in a file called readme located in the home directory.
+>Now that we are in bandit0, we are going to look up a file, read it for a password, and use that password to enter into bandit1.
+
+>The first command we will use is: ls
+
+>'ls' is used to list files, on its own it lists all files in the current directory except for hidden files.
+
+>When we hit ENTER the terminal will tell us we can open a file called 'readme'
+
+>Our next command will be: cat readme
+
+>The command 'cat' reads the file and prints it for us.
+
+>This will reveal the password needed for bandit1. Go ahead and enter exit then log into: ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+>Copy/paste password and enter bandit1
+
+
+LEVEL 1-2: The password for the next level is stored in a file called - located in the home directory.
+>Our first command will be: ls -a
+
+>'-a' means show all, or an all option. So right now we are saying list all files.
+
+>This will print our list of files, we want to read '-' so go ahead and enter: cat ./-
+
+>'./' is used as a way to indicate the current directory or current folder. So we are saying, 'Please read the '-' file in the current directory.
+
+>You got the password! Now enter 'exit', repeat the previous steps for logging into bandit except now we will log into bandit2.
+
+
+LEVEL 2-3: The password for the next level is stored in a file called spaces in this filename located in the home directory.
+>For this one the first command I used was: dir
+
+>'dir' is mostly like 'ls' except it gives a more detailed information. I have not tested this one using 'ls' instead, but it might still get the job done.
+
+>Using dir will reveal: 'spaces\ in\ this\ filename'
+
+>Your next command will be: cat spaces\ in\ this\ filename
+
+>This will reveal the password, repeat steps above for logging into bandit3.
+
+
+LEVEL 3-4: The password for the next level is stored in a hidden file in the inhere directory.
+>We will enter in: ls
+
+>This wil show us 'inhere' in blue text, blue text just means it is the directory.
+
+>Next we would type in: cd inhere
+
+>'cd' is a command we use to change directories, remember we want to find a hidden file right now.
+
+>This command will show us a list of files, we want to read '.hidden'
+
+>Next command will be: cat .hidden
+
+>This will reveal the password, repeat steps above for logging into bandit4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
