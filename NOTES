@@ -70,6 +70,50 @@ LEVEL 3-4: The password for the next level is stored in a hidden file in the inh
 
 
 
+LEVEL 4-5: The password for the next level is stored in the only human-readable file in the inhere directory.
+>We want to look at the inhere directory, so lets start with: ls inhere
+
+>This will show us all our files, but we need to find the human readable files.
+
+>Lets go with: 'cd inhere/' to change directory, then enter 'ls' once we have entered the new directory.
+
+>Now we need to check all these files with: file ./*
+
+>The file command tells us what kind of data is found in the file.
+
+>File 7 returns with ASCII text, we want to read that: cat ./-file07
+
+>Enter your password for logging into level 5!
+
+
+
+LEVEL 5-6:The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties: human-readable, 1033 bytes in size, not executable.
+>This will be a little more tricky then the previous ones. Firstly do your normal set up of: 'ls' and 'cd inhere/' then finally 'ls' again.
+
+>A list of maybehere files should show up.
+
+>For this part we are going to enter in: find . -type f -size 1033c -not -executable -exec file {} + | grep ASCII
+>.: Search the current working directory only
+>-type f : Look for files only (Exclude Directories)
+>-size 1033c : Look for files that are exactly 1033 bytes in size (Find uses “c” to represent bytes)
+>-not -executable : Find only non executable files
+>-exec file {} + : Execute the file command on all the results returns by find
+
+>This should bring back: ./maybehere07/.file2: ASCII text, with very long lines
+
+>Enter in: cat ./maybehere07/.file2
+
+>Use your password to enter level 6!
+
+
+
+
+
+
+
+
+
+
 
 
 
